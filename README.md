@@ -8,17 +8,17 @@
 
 **Example creation usage:**  
 
-[https://shurli.herokuapp.com/new/https://www.google.com](https://shurli.herokuapp.com/new/https://www.google.com)
+[https://url-shortner-lucaslmuller.c9users.io/new/https://www.google.com](https://url-shortner-lucaslmuller.c9users.io/new/https://www.google.com)
 
-[https://shurli.herokuapp.com/new/http://freecodecamp.com/news](https://shurli.herokuapp.com/new/http://freecodecamp.com/news)  
+[https://url-shortner-lucaslmuller.c9users.io/new/http://freecodecamp.com/news](https://url-shortner-lucaslmuller.c9users.io/new/http://freecodecamp.com/news)  
 
 **Example creation output:**  
 
-`{ "original_url": "http://freecodecamp.com/news", "short_url": "https://shurli.herokuapp.com/4" }`  
+`{ "original_url" : "http://www.freecodecamp.com/news", "short_url" : "https://url-shortner-lucaslmuller.c9users.io/3" }`  
 
 **Usage:**  
 
-[https://shurli.herokuapp.com/4](https://shurli.herokuapp.com/4)  
+[https://url-shortner-lucaslmuller.c9users.io/3](https://url-shortner-lucaslmuller.c9users.io/3)  
 
 **Will redirect to:**  
 
