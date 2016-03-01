@@ -2,7 +2,6 @@ var express = require("express");
 var mongoose = require("mongoose");
 var fs = require("fs");
 var marked = require('marked');
-var shortid = require('shortid');
 var validator = require('validator');
 
 mongoose.connect("mongodb://"+process.env.IP+"/urls");
@@ -58,17 +57,18 @@ app.get("/new/:url(*)", function(req, res){
     
             if(data.length == 0){
                 
-                var short = req.headers['x-forwarded-proto'] + "://" + req.headers.host + "/" + shortid.generate();
-                
-                Model.create({
-                    original_url: query,
-                    short_url: short
-                });
-                
-                
-                Model.findOne({original_url: query}, {_id: 0, __v: 0}, function(err, data){
+                Model.find({}, function(err, data){
                     if(err) console.log(err);
-                    res.send(data);
+                    
+                    Model.create({
+                        original_url: query,
+                        short_url: req.headers['x-forwarded-proto'] + "://" + req.headers.host + "/" + (parseInt(data.length) + 1)
+                    });
+                    
+                    Model.findOne({original_url: query}, {_id: 0, __v: 0}, function(err, data){
+                        if(err) console.log(err);
+                        res.send(data);
+                    });
                 });
                 
                 
