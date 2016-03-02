@@ -9,14 +9,15 @@
   "keywords": [
     "mongodb",
     "mongoose",
-    "nodejs"
+    "nodejs",
+    "expressjs"
   ],
   "author": "Lucas Lima Muller <contato@lucaslimamuller.com.br>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
+    "marked": "^0.3.5",
     "mongoose": "^4.4.5",
-    "shortid": "^2.2.4",
     "validator": "^5.0.0"
   }
 }
